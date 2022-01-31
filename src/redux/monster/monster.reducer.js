@@ -1,9 +1,22 @@
-import { monsterActionTypes } from "./monster.type";
+import  monsterActionTypes  from "./monster.type";
 
-export const INITIAL_STATE = {
-    searchField: ''
+const INITIAL_STATE = {
+    searchField: '',
+    monsters:[],
+    createMonster: []
 }
 
+
+// if action.type === monsterActionTypes.SEARCH_MONSTER
+// "SEARCH_MONSTER" === "SEARCH_MONSTER"
+// payload you are updating with action.payload
+
+// Output
+// {
+//     searchField: 'ervin',
+//     monsters: [],
+//     createMonster: []
+// }
 export const searchReducer = (state = INITIAL_STATE, action)=>{
     switch (action.type) {
         case monsterActionTypes.SEARCH_MONSTER:
